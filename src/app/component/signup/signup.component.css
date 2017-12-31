@@ -1,0 +1,40 @@
+legend{
+    font-size:14px;
+}
+input{
+    margin-top: -15px;
+    margin-bottom: 10px;
+}
+.confirm{
+    margin-top:50px;
+}
+.signup-box{
+    margin: 60px;
+    padding: 20px;
+    position: absolute;
+    right:10%;
+    width: 400px;
+    text-align: left;
+    border-radius: 2%;
+}
+.btn{
+    float: right;
+}
+.form-control{
+    -webkit-border-radius: 5;
+       -moz-border-radius: 5;
+            border-radius: 5;
+}
+.limit {
+    position: absolute;
+    float: left;
+    font-size: 14px;
+    width: 150px;
+    font-family: 'Lobster';
+}
+.description{
+    padding-top: 80px;
+    padding-left: 150px;
+    width: 50%;
+    height: 650px;
+}

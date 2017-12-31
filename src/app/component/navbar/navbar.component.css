@@ -1,0 +1,21 @@
+.icon-bar {
+  color:  rgb(51,102,187);
+  background-color:  rgb(51,102,187);
+}
+
+.navbar-toggle {
+  border: solid .5px  rgb(51,102,187);
+}
+
+.navbar{
+  border-bottom: 1px solid  rgb(51,102,187);
+  border-radius: 0
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+ul {
+  list-style-type: none;
+}

@@ -1,0 +1,25 @@
+<h3>{{topic.name}}</h3>
+<div class="container">
+  <button class="btn btn-default" (click)="goBack()">Go Back</button>
+  <ul class="quizs">
+    <li id="quizs" *ngFor="let quiz of quizs">
+
+      <div id="quiz" class="quiz">
+        <div class="quiz-name">
+          <h3>{{quiz.testTitle}}</h3>
+        </div>
+        <div class="creator">
+          <cite>By: {{quiz.creatorId}}</cite>
+        </div>
+        <div class="description">
+          {{quiz.description}}
+        </div>
+        <div class="choices">
+          <a routerLink="/quiz/{{quiz.testId}}">
+            <button class="btn btn-primary">Take Test</button>
+          </a>
+        </div>
+      </div>
+    </li>
+  </ul>
+</div>

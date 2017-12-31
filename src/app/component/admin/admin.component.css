@@ -1,0 +1,26 @@
+.destruct {
+    border: 2px solid rgb(51,102,187);
+    padding: 20px;
+}
+
+#approveuser{
+  border: 2px solid rgb(51,102,187);
+  padding: 20px;
+  text-align: left;
+}
+
+#promoteuser{
+  border: 2px solid rgb(51,102,187);
+  padding: 20px;
+  text-align: left;
+}
+
+
+.badcontainer {
+  padding-top: 10px;
+  padding-bottom: 20px;
+}
+
+ul {
+  list-style: none;
+}

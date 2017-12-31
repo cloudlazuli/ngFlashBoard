@@ -1,0 +1,69 @@
+<nav class="navbar navbar-light">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#myNavbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" routerLink="home">FlashBoard</a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li class="nav-item">
+          <a routerLink="search">
+            <span class="glyphicon glyphicon-search"></span> Search
+            <span class="sr-only"></span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a routerLink="create">
+            <span class="glyphicon glyphicon-pencil"></span> Create</a>
+        </li>
+        <li class="nav-item">
+          <a routerLink="browse">
+            <span class="glyphicon glyphicon glyphicon-education
+            "></span> Quiz</a>
+        </li>
+        <li class="nav-item">
+          <a routerLink="study">
+            <span class="glyphicon glyphicon-book"></span> Study
+          </a>
+        </li>
+        <li class="nav-item" *ngIf="loginData.userRole == 2">
+          <a routerLink="admin">
+            <span class="	glyphicon glyphicon-wrench"></span> Administrative Tools </a>
+        </li>
+
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <!-- Trigger the modal with a button -->
+        <li *ngIf="!loginData.loggedIn" class="login" data-toggle="modal" data-target="#myModal">
+          <!-- pointer class is for styling the link, so the cursor will be a pointer, not a hightlight-->
+          <a class="pointer">
+            <span class="glyphicon glyphicon-log-in"></span> Log in</a>
+        </li>
+        <li *ngIf="loginData.loggedIn" class="login" (click)=logOutAccount()>
+          <a class="pointer">
+            <span class="glyphicon glyphicon-log-in"></span> Log out</a>
+        </li>
+
+        <!-- Modal Start-->
+        <div class="modal fade" id="myModal" role="dialog">
+          <app-login (login)="loginChange($event)"></app-login>
+        </div>
+        <!-- ./Modal Ends -->
+        <li *ngIf="!loginData.loggedIn">
+          <a routerLink="signup" class="sign-up">
+            <span class="glyphicon glyphicon-user"></span> Sign Up</a>
+        </li>
+        <li *ngIf="loginData.loggedIn">
+          <a [routerLink]="loginData.profileUrl" class="profile">
+            <span class="glyphicon glyphicon-user"></span> Profile</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
